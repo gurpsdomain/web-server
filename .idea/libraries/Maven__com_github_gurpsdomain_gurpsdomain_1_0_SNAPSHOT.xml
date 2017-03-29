@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.gurpsdomain:gurpsdomain:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/gurpsdomain/gurpsdomain/1.0-SNAPSHOT/gurpsdomain-1.0-20161209.202842-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/gurpsdomain/gurpsdomain/1.0-SNAPSHOT/gurpsdomain-1.0-20161209.202842-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/gurpsdomain/gurpsdomain/1.0-SNAPSHOT/gurpsdomain-1.0-20161209.202842-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

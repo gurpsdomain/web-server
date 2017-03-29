@@ -1,5 +1,8 @@
 package org.gurpsdomain.controller;
 
+import org.gurpsdomain.Pipeline;
+import org.gurpsdomain.adapters.input.SheetInput;
+import org.gurpsdomain.adapters.output.SheetOutput;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,6 +12,8 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.io.Writer;
 
+import static org.gurpsdomain.adapters.input.yaml.YamlSheetInput.fromYaml;
+import static org.gurpsdomain.adapters.output.json.JsonSheetOutput.toJson;
 import static org.springframework.http.ResponseEntity.status;
 
 @RestController
@@ -30,17 +35,17 @@ public class Controller {
     @ResponseBody
     public String convert(@RequestBody String inputJson) {
 
-//        Reader reader = new StringReader(inputJson);
-//        Writer writer = new StringWriter();
-//
-//        SheetInput input = fromYaml(reader);
-//        SheetOutput output = toJson(writer);
-//
-//        Pipeline.flow(input).into(output);
-//
-//        String outputJson = writer.toString();
-//
-//        return outputJson;
-        return inputJson;
+        Reader reader = new StringReader(inputJson);
+        Writer writer = new StringWriter();
+
+        SheetInput input = fromYaml(reader);
+        SheetOutput output = toJson(writer);
+
+        Pipeline.flow(input).into(output);
+
+        String outputJson = writer.toString();
+
+        return outputJson;
+//        return inputJson;
     }
 }
